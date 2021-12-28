@@ -29,6 +29,7 @@ const Feed = () => {
     },[categoryId])
     
     if(loading) return <Spinner message="we are udating your feed please wait :)"/>
+   if (!pins?.length) return <h2>No pins available</h2>
     return (
         <div>
         {pins && (
